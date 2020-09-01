@@ -26,7 +26,7 @@ export default class Header extends Component {
 
                     <div className="header__input">
                         <SearchIcon />
-                        <input type="text" placeholder='Search Ebook' />
+                        <input type="text" placeholder='Search Fakebook' />
                     </div>
                 </div>
 
