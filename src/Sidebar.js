@@ -7,11 +7,13 @@ import PeopleIcon from "@material-ui/icons/People";
 import ChatIcon from "@material-ui/icons/Chat";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
+import { useStateValue } from './StateProvider';
 
 function Sidebar() {
+    const [{ user }, dispatch] = useStateValue();
     return (
         <div className="sidebar">
-            <SidebarRow src="https://www.facebook.com/photo.php?fbid=333813814279013&set=t.676125493&type=3" title='Eric Hampton'/>
+            <SidebarRow src={user.photoURL} title={user.displayName}/>
             <SidebarRow 
             Icon={LocalHospitalIcon}
             title="COVID-19 Information Center"
